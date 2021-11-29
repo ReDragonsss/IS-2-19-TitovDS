@@ -21,47 +21,12 @@ namespace IS_2_19_TitivDS
         {
 
         }
-        public abstract class people<k>
-        {
-            public string fio;
-            public string datroj;
-            public long tel;
-            public k kod;
-            public people(string Fio, string Datroj, long Tel, k Kod)
-            {
-                fio = Fio;
-                datroj = Datroj;
-                tel = Tel;
-                kod = Kod;
-            }
-            public abstract void Display();
 
-
-        }
-        public class Sotrudnik<k> : people<k>
-        {
-            public string dolj;
-            public int zarplat;
-            public Sotrudnik(string Fio, string Datroj, long Tel, string Dolj, int Zarplat, k Kod)
-               : base(Fio, Datroj, Tel, Kod)
-            {
-                dolj = Dolj;
-                zarplat = Zarplat;
-
-            }
-            public override void Display()
-            {
-                MessageBox.Show($" Сотрудник {fio}, дата рождения {datroj}, номер телефона {tel}, должность {dolj},с заработная плата {zarplat}, уникальный код{kod}");
-            }
-        }
         private void button1_Click(object sender, EventArgs e)
         {
-            Sotrudnik<int> st1 = new Sotrudnik<int>(Convert.ToString(textBox1.Text), Convert.ToString(textBox2.Text), Convert.ToInt64(textBox3.Text), Convert.ToString(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToInt32(textBox6.Text)); ;
-            st1.Display();
+            Form2 Form2 = new Form2();
+            Form2.ShowDialog();
         }
     }
 }
 
-
-    }
-}
