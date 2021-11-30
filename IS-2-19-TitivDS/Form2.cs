@@ -52,7 +52,7 @@ namespace IS_2_19_TitivDS
                   public string kolvopotokov { get { return kolvopotokov1; } set { kolvopotokov1 = value; } }
                 public override void Display(ListBox listBox1)
                 {
-                listBox1.Items.Add($"{cena},{godvipuska},{chastota},{kolvoiader},{kolvopotokov},");
+                listBox1.Items.Add($"{cena},{godvipuska},{chastota},{kolvoiader},{kolvopotokov},{articul}");
                 } 
         }
              class videocart : Accessories<string>
@@ -74,7 +74,7 @@ namespace IS_2_19_TitivDS
                   public string obiempameti { get { return obiempameti1; } set { obiempameti1 = value; } }
                  public override void Display(ListBox listBox1)
                  {
-                    listBox1.Items.Add($"{cena},{godvipuska},{chastota},{proizvod},{obiempameti},");
+                    listBox1.Items.Add($"{cena},{godvipuska},{chastota},{proizvod},{obiempameti},{articul}");
                  }
 
              }
@@ -85,10 +85,22 @@ namespace IS_2_19_TitivDS
           string cena = Convert.ToString(textBox1.Text);
           string godvipuska = Convert.ToString(textBox2.Text);
           string chastota = Convert.ToString(textBox3.Text);
-          string kolvoiader = Convert.ToString(textBox4.Text);
-          string kolvopotokov = Convert.ToString(textBox5.Text);
-          string Articul = Convert.ToString(textBox6.Text);
-            Cp cp1 = new Cp(cena, godvipuska, Articul, chastota, kolvoiader, kolvopotokov);
+          string proizvod = Convert.ToString(textBox4.Text);
+          string obiempameti = Convert.ToString(textBox5.Text);
+          string articul = Convert.ToString(textBox6.Text);
+            videocart vd1 = new videocart(cena, godvipuska, articul, chastota, proizvod, obiempameti);
+            vd1.Display(listBox1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string cena = Convert.ToString(textBox1.Text);
+            string godvipuska = Convert.ToString(textBox2.Text);
+            string chastota = Convert.ToString(textBox3.Text);
+            string kolvoiader = Convert.ToString(textBox4.Text);
+            string kolvopotokov = Convert.ToString(textBox5.Text);
+            string articul = Convert.ToString(textBox6.Text);
+            Cp cp1 = new Cp(cena, godvipuska, articul, chastota, kolvoiader, kolvopotokov);
             cp1.Display(listBox1);
         }
     }

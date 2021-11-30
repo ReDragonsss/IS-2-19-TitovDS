@@ -27,6 +27,12 @@ namespace IS_2_19_TitivDS
             Form2 Form2 = new Form2();
             Form2.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 Form3 = new Form3();
+            Form3.ShowDialog();
+        }
     }
 }
 
