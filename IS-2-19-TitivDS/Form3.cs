@@ -48,6 +48,6 @@ namespace IS_2_19_TitivDS
                 MessageBox.Show("Произошла ошибка"+ osh);
                 conn.Close();
             }
-        }
+            }
     }
 }
