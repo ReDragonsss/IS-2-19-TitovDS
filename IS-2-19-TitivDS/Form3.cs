@@ -13,9 +13,9 @@ namespace IS_2_19_TitivDS
 {
     public partial class Form3 : Form
     {
-        static class DBUtils
+        static class Vozrah
         {
-            public static string GetDBConnection()
+            public static string GetDVozrah()
             {
                 string host = "caseum.ru";
                 string port = "33333";
@@ -26,7 +26,7 @@ namespace IS_2_19_TitivDS
                 return connString;
             }
         }
-        MySqlConnection conn = new MySqlConnection(DBUtils.GetDBConnection());
+        MySqlConnection conn = new MySqlConnection(Vozrah.GetDVozrah());
         public Form3()
         {
             InitializeComponent();
