@@ -52,7 +52,7 @@ namespace IS_2_19_TitivDS
                   public string kolvopotokov { get { return kolvopotokov1; } set { kolvopotokov1 = value; } }
                 public override void Display(ListBox listBox1)
                 {
-                listBox1.Items.Add($"{cena},{godvipuska},{chastota},{kolvoiader},{kolvopotokov},{articul}");
+                listBox1.Items.Add($"Цена {cena},Год выпуска {godvipuska},Частота {chastota},Количество ядер {kolvoiader}, Количество потоков {kolvopotokov}, Артикул{articul}");
                 } 
         }
              class videocart : Accessories<string>
@@ -74,7 +74,7 @@ namespace IS_2_19_TitivDS
                   public string obiempameti { get { return obiempameti1; } set { obiempameti1 = value; } }
                  public override void Display(ListBox listBox1)
                  {
-                    listBox1.Items.Add($"{cena},{godvipuska},{chastota},{proizvod},{obiempameti},{articul}");
+                    listBox1.Items.Add($"Цена{cena},Год выпуска{godvipuska},Частота {chastota},Производитель {proizvod},Обьем памяти {obiempameti},Артикул {articul}");
                  }
 
              }
