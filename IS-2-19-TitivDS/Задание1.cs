@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IS_2_19_TitivDS
 {
-    public partial class Form2 : Form
+    public partial class Задание1 : Form
     {
-        public Form2()
+        public Задание1()
         {
             InitializeComponent();
         }

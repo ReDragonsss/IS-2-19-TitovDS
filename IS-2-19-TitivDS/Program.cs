@@ -16,7 +16,7 @@ namespace IS_2_19_TitivDS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Меню());
         }
         public class Vozrah
         {

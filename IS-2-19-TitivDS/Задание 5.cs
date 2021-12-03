@@ -18,7 +18,6 @@ namespace IS_2_19_TitivDS
         {
             InitializeComponent();
         }
-
         private void Form6_Load(object sender, EventArgs e)
         {
 

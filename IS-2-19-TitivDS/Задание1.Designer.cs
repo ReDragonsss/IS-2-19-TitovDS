@@ -1,7 +1,7 @@
 ﻿
 namespace IS_2_19_TitivDS
 {
-    partial class Form2
+    partial class Задание1
     {
         /// <summary>
         /// Required designer variable.
@@ -105,7 +105,7 @@ namespace IS_2_19_TitivDS
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(275, 26);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(424, 290);
+            this.listBox1.Size = new System.Drawing.Size(695, 290);
             this.listBox1.TabIndex = 7;
             // 
             // button2
@@ -190,11 +190,11 @@ namespace IS_2_19_TitivDS
             this.label8.TabIndex = 16;
             this.label8.Text = "Количество потоков";
             // 
-            // Form2
+            // Задание1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 323);
+            this.ClientSize = new System.Drawing.Size(976, 323);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -212,7 +212,7 @@ namespace IS_2_19_TitivDS
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "Form2";
+            this.Name = "Задание1";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

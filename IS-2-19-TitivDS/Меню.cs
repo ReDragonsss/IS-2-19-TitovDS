@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IS_2_19_TitivDS
 {
-    public partial class Form1 : Form
+    public partial class Меню : Form
     {
-        public Form1()
+        public Меню()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace IS_2_19_TitivDS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 Form2 = new Form2();
+            Задание1 Form2 = new Задание1();
             Form2.ShowDialog();
         }
 

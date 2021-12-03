@@ -40,7 +40,6 @@ namespace IS_2_19_TitivDS
 
         }
         string id_rows = "0";
-
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Left))

@@ -1,7 +1,7 @@
 ﻿
 namespace IS_2_19_TitivDS
 {
-    partial class Form1
+    partial class Меню
     {
         /// <summary>
         /// Обязательная переменная конструктора.
