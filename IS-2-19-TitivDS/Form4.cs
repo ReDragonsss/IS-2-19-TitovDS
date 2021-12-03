@@ -19,7 +19,7 @@ namespace IS_2_19_TitivDS
         }
         private void Form4_Load(object sender, EventArgs e)
         {
-            Program.GetDVozrah conn = new Program.GetDVozrah();
+            Program.Vozrah conn = new Program.Vozrah();
             MySqlConnection connn = new MySqlConnection(conn.Connstring);
             string sql = $"SELECT id, fio, theme_kurs FROM t_stud";
             try
