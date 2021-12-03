@@ -18,5 +18,14 @@ namespace IS_2_19_TitivDS
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+        public class GetDVozrah
+        {
+            public string Connstring = "server=caseum.ru;port=33333;user=test_user;database=db_test;password=test_pass;";//для 3 задание пришлось сменить с метода на класс
+            public string getdVozrah()
+            {
+                return Connstring;
+            }
+        }
     }
 }
+

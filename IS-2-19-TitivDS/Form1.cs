@@ -33,6 +33,12 @@ namespace IS_2_19_TitivDS
             Form3 Form3 = new Form3();
             Form3.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 Form4 = new Form4();
+            Form4.ShowDialog();
+        }
     }
 }
 
