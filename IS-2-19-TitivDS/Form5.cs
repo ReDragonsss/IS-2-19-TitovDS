@@ -55,8 +55,8 @@ namespace IS_2_19_TitivDS
                 id_rows5 = dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[2].Value.ToString();
                 DateTime x = DateTime.Today;
                 DateTime y = Convert.ToDateTime(dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[2].Value.ToString());
-                string resultDays = (x - y).ToString(); //Тут хранится значение, которое соотвутствует прошедшим дням
-                MessageBox.Show("Со дня рождения прошло " + resultDays.Substring(0, resultDays.Length - 9) + " дней"); //Тут это значение приводится в презентабельный вид и выводится пользователю
+                string resultDays = (x - y).ToString(); 
+                MessageBox.Show("Со дня рождения прошло " + resultDays.Substring(0, resultDays.Length - 9) + " дней"); 
             }
         }
     }

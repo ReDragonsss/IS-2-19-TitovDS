@@ -45,6 +45,12 @@ namespace IS_2_19_TitivDS
             Form5 Form5 = new Form5();
             Form5.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form6 Form6 = new Form6();
+            Form6.ShowDialog();
+        }
     }
 }
 
