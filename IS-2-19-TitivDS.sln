@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS-2-19-TitivDS", "IS-2-19-TitivDS\IS-2-19-TitivDS.csproj", "{81012623-2ED2-43EB-86A3-AF546BE7AE1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectDB", "ConnectDB\ConnectDB.csproj", "{9209C4D7-E107-4543-AE2B-DD2B17AB6743}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{81012623-2ED2-43EB-86A3-AF546BE7AE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81012623-2ED2-43EB-86A3-AF546BE7AE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81012623-2ED2-43EB-86A3-AF546BE7AE1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9209C4D7-E107-4543-AE2B-DD2B17AB6743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9209C4D7-E107-4543-AE2B-DD2B17AB6743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9209C4D7-E107-4543-AE2B-DD2B17AB6743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9209C4D7-E107-4543-AE2B-DD2B17AB6743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
