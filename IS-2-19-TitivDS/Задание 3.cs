@@ -19,10 +19,10 @@ namespace IS_2_19_TitivDS
         }
         private void Form4_Load(object sender, EventArgs e)
         {
-            Program.Vozrah conn = new Program.Vozrah();
+            Program.Vozrah conn = new Program.Vozrah();// использование метода из program
             MySqlConnection connn = new MySqlConnection(conn.Connstring);
-            string sql = $"SELECT id, fio, theme_kurs FROM t_stud";
-            try
+            string sql = $"SELECT id, fio, theme_kurs FROM t_stud";// запрос на вынос из бд ида фио и темы курс
+            try// правильность подключ
             {
                 connn.Open();
                 MessageBox.Show("Подключение");
@@ -55,6 +55,11 @@ namespace IS_2_19_TitivDS
                 id_rows = dataGridView1.Rows[Convert.ToInt32(index_rows)].Cells[1].Value.ToString();
                 MessageBox.Show(id_rows);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

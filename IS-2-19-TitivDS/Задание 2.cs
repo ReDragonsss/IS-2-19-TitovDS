@@ -15,7 +15,7 @@ namespace IS_2_19_TitivDS
     {
         static class Vozrah
         {
-            public static string GetDVozrah()
+            public static string GetDVozrah()//метод для подключения в бд
             {
                 string host = "caseum.ru";
                 string port = "33333";
@@ -26,21 +26,19 @@ namespace IS_2_19_TitivDS
                 return connString;
             }
         }
-        MySqlConnection conn = new MySqlConnection(Vozrah.GetDVozrah());
+        MySqlConnection conn = new MySqlConnection(Vozrah.GetDVozrah());//обьевление переменной для конекта в бд
         public Form3()
         {
             InitializeComponent();
         } 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-        }
             private void button1_Click(object sender, EventArgs e)
             {
-            try
+            try//проверка на правильность данных
             {
                 conn.Open();
                 MessageBox.Show("Подключение");
                 conn.Close();
+
             }
             catch(Exception osh)
             {

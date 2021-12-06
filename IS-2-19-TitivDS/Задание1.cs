@@ -21,12 +21,12 @@ namespace IS_2_19_TitivDS
         {
 
         }
-        abstract class Accessories<k>
+        abstract class Accessories<k> //создание абстрак класс для послед наследования других 2 классов
         {
             protected string cena;
             protected string godvipuska;
             protected string articul;
-            public Accessories(string Cena, string Godvipuska,string Articul)
+            public Accessories(string Cena, string Godvipuska,string Articul)//конструктор для инициализации переменные
             {
                 cena = Cena;
                 godvipuska = Godvipuska;
@@ -34,12 +34,12 @@ namespace IS_2_19_TitivDS
             }
             public abstract void Display(ListBox listbox1);
         }
-        class Cp : Accessories<string>
+        class Cp : Accessories<string>//1 наследник
         {
             public string chastota1;
             public string kolvoiader1;
             public string kolvopotokov1;
-            public Cp(string Cena, string Godvipuska,string Articul, string Chastota, string Kolvoiader, string Kolvopotokov)
+            public Cp(string Cena, string Godvipuska,string Articul, string Chastota, string Kolvoiader, string Kolvopotokov)//конструктор для инициализации переменные
                : base(Cena, Godvipuska,Articul)
             {
                 chastota = Chastota;
@@ -47,21 +47,21 @@ namespace IS_2_19_TitivDS
                 kolvopotokov = Kolvopotokov;
 
             }
-                  public string chastota { get { return chastota1; } set { chastota1= value;}}
-                  public string kolvoiader { get { return kolvoiader1; } set { kolvoiader1 = value; } }
-                  public string kolvopotokov { get { return kolvopotokov1; } set { kolvopotokov1 = value; } }
-                public override void Display(ListBox listBox1)
+                  public string chastota { get { return chastota1; } set { chastota1= value;}}//переменная для получения текста и возращенее его
+                  public string kolvoiader { get { return kolvoiader1; } set { kolvoiader1 = value; } }//переменная для получения текста и возращенее его
+                  public string kolvopotokov { get { return kolvopotokov1; } set { kolvopotokov1 = value; } }//переменная для получения текста и возращенее его
+            public override void Display(ListBox listBox1)
                 {
-                listBox1.Items.Add($"Цена {cena},Год выпуска {godvipuska},Частота {chastota},Количество ядер {kolvoiader}, Количество потоков {kolvopotokov}, Артикул{articul}");
+                listBox1.Items.Add($"Цена {cena},Год выпуска {godvipuska},Частота {chastota},Количество ядер {kolvoiader}, Количество потоков {kolvopotokov},Артикул{articul}");
                 } 
         }
-             class videocart : Accessories<string>
-            {
+             class videocart : Accessories<string>//2 наследник
+        {
                 public string chastota1;
                 public string proizvod1;
                 public string obiempameti1;
          
-                public videocart(string Cena, string Godvipuska, string Articul, string Chastota, string Proizvod, string Obiempameti)
+                public videocart(string Cena, string Godvipuska, string Articul, string Chastota, string Proizvod, string Obiempameti)//конструктор для инициализации переменные
                    : base(Cena, Godvipuska,Articul)
                 {
                     chastota = Chastota;
@@ -69,39 +69,36 @@ namespace IS_2_19_TitivDS
                     obiempameti = Obiempameti;
 
                 }
-                 public string chastota { get { return chastota1; } set { chastota1 = value; } }
-                  public string proizvod { get { return proizvod1; } set { proizvod1 = value; } }
-                  public string obiempameti { get { return obiempameti1; } set { obiempameti1 = value; } }
-                 public override void Display(ListBox listBox1)
+                  public string chastota { get { return chastota1; } set { chastota1 = value; } }//переменная для получения текста и возращенее его
+                  public string proizvod { get { return proizvod1; } set { proizvod1 = value; } }//переменная для получения текста и возращенее его
+                  public string obiempameti { get { return obiempameti1; } set { obiempameti1 = value; } }//переменная для получения текста и возращенее его
+            public override void Display(ListBox listBox1)
                  {
                     listBox1.Items.Add($"Цена{cena},Год выпуска{godvipuska},Частота {chastota},Производитель {proizvod},Обьем памяти {obiempameti},Артикул {articul}");
                  }
-
              }
-        
-
         private void button1_Click(object sender, EventArgs e)
         {
-          string cena = Convert.ToString(textBox1.Text);
-          string godvipuska = Convert.ToString(textBox2.Text);
-          string chastota = Convert.ToString(textBox3.Text);
-          string proizvod = Convert.ToString(textBox4.Text);
-          string obiempameti = Convert.ToString(textBox5.Text);
-          string articul = Convert.ToString(textBox6.Text);
+            string cena = Convert.ToString(textBox1.Text);// заполнение переменных
+            string godvipuska = Convert.ToString(textBox2.Text);// заполнение переменных
+            string chastota = Convert.ToString(textBox3.Text);// заполнение переменных
+            string proizvod = Convert.ToString(textBox4.Text);// заполнение переменных
+            string obiempameti = Convert.ToString(textBox5.Text);// заполнение переменных
+            string articul = Convert.ToString(textBox6.Text);
             videocart vd1 = new videocart(cena, godvipuska, articul, chastota, proizvod, obiempameti);
-            vd1.Display(listBox1);
+            vd1.Display(listBox1);//вызов метода
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string cena = Convert.ToString(textBox1.Text);
-            string godvipuska = Convert.ToString(textBox2.Text);
-            string chastota = Convert.ToString(textBox3.Text);
-            string kolvoiader = Convert.ToString(textBox4.Text);
-            string kolvopotokov = Convert.ToString(textBox5.Text);
-            string articul = Convert.ToString(textBox6.Text);
+            string cena = Convert.ToString(textBox1.Text);// заполнение переменных
+            string godvipuska = Convert.ToString(textBox2.Text);// заполнение переменных
+            string chastota = Convert.ToString(textBox3.Text);// заполнение переменных
+            string kolvoiader = Convert.ToString(textBox4.Text);// заполнение переменных
+            string kolvopotokov = Convert.ToString(textBox5.Text);// заполнение переменных
+            string articul = Convert.ToString(textBox6.Text);// заполнение переменных
             Cp cp1 = new Cp(cena, godvipuska, articul, chastota, kolvoiader, kolvopotokov);
-            cp1.Display(listBox1);
+            cp1.Display(listBox1);//вызов метода
         }
     }
 }
