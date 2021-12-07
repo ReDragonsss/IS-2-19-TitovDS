@@ -28,7 +28,7 @@ namespace IS_2_19_TitivDS
                 MessageBox.Show("Подключение");
                 MySqlDataAdapter IDataAdapter = new MySqlDataAdapter(sql, connn);
                 DataSet dataset = new DataSet();
-                IDataAdapter.Fill(dataset);
+                IDataAdapter.Fill(dataset);// заполнение датагрида
                 dataGridView1.DataSource = dataset.Tables[0];
                 connn.Close();
             }
@@ -42,9 +42,9 @@ namespace IS_2_19_TitivDS
         string id_rows = "0";
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Left))
+            if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Left))// срабатывает при нажатии на лкм
             {
-                dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];
+                dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];// отвечает за то куда нажали
 
                 dataGridView1.CurrentRow.Selected = true;
 
@@ -52,14 +52,9 @@ namespace IS_2_19_TitivDS
 
                 index_rows = dataGridView1.SelectedCells[0].RowIndex.ToString();
 
-                id_rows = dataGridView1.Rows[Convert.ToInt32(index_rows)].Cells[1].Value.ToString();
+                id_rows = dataGridView1.Rows[Convert.ToInt32(index_rows)].Cells[1].Value.ToString(); // Переменной  присваевается значение выбранной строки
                 MessageBox.Show(id_rows);
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

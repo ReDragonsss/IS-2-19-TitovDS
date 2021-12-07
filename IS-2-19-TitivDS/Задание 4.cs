@@ -20,9 +20,9 @@ namespace IS_2_19_TitivDS
         }
         private void Form5_Load(object sender, EventArgs e)
         {
-            ConnectDB conn = new ConnectDB();
+            ConnectDB conn = new ConnectDB();// подключ класс из длл
             MySqlConnection connn = new MySqlConnection(conn.Connstring);
-            string sql = $"SELECT idStud, fioStud, drStud FROM t_datetime";
+            string sql = $"SELECT idStud, fioStud, drStud FROM t_datetime";// запрос на вынос данных ида фио и дне рожд
             try
             {
                 connn.Open();
@@ -42,9 +42,9 @@ namespace IS_2_19_TitivDS
         string id_rows5 = "0";
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Left))
+            if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Left))// код срабат на лкм
             {
-                dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];
+                dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];// определение  строки
 
                 dataGridView1.CurrentRow.Selected = true;
 
@@ -54,9 +54,9 @@ namespace IS_2_19_TitivDS
 
                 id_rows5 = dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[2].Value.ToString();
                 DateTime x = DateTime.Today;
-                DateTime y = Convert.ToDateTime(dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[2].Value.ToString());
-                string resultDays = (x - y).ToString(); 
-                MessageBox.Show("Со дня рождения прошло " + resultDays.Substring(0, resultDays.Length - 9) + " дней"); 
+                DateTime y = Convert.ToDateTime(dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[2].Value.ToString());// Переменной  присваевается значение выбранной строки
+                string DayR = (x - y).ToString(); 
+                MessageBox.Show("дней с рождения " + DayR.Substring(0, DayR.Length - 9)); 
             }
         }
     }

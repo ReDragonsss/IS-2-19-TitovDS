@@ -18,19 +18,15 @@ namespace IS_2_19_TitivDS
         {
             InitializeComponent();
         }
-        private void Form6_Load(object sender, EventArgs e)
-        {
-
-        }
         private void button1_Click(object sender, EventArgs e)
         {
-            ConnectDB conn = new ConnectDB();
+            ConnectDB conn = new ConnectDB();// подключ класс из длл
             MySqlConnection connn = new MySqlConnection(conn.Connstring);
             string fio = textBox1.Text;
             string vremia = textBox2.Text;
-            string sql = $"INSERT INTO t_PraktStud (fioStud, datetimeStud)  VALUES ('{fio}','{vremia}');";
+            string sql = $"INSERT INTO t_PraktStud (fioStud, datetimeStud)  VALUES ('{fio}','{vremia}');";// запрос на дбавление фио  и времени 
             int perem = 0;
-            try
+            try// проверка на нормальное подключ
             {
                 connn.Open();
                 MySqlCommand command1 = new MySqlCommand(sql, connn);

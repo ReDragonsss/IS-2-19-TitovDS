@@ -47,9 +47,9 @@ namespace IS_2_19_TitivDS
                 kolvopotokov = Kolvopotokov;
 
             }
-                  public string chastota { get { return chastota1; } set { chastota1= value;}}//переменная для получения текста и возращенее его
-                  public string kolvoiader { get { return kolvoiader1; } set { kolvoiader1 = value; } }//переменная для получения текста и возращенее его
-                  public string kolvopotokov { get { return kolvopotokov1; } set { kolvopotokov1 = value; } }//переменная для получения текста и возращенее его
+                  public string chastota { get { return chastota1; } set { chastota1= value;}}//доп логика
+                  public string kolvoiader { get { return kolvoiader1; } set { kolvoiader1 = value; } }//доп логика
+            public string kolvopotokov { get { return kolvopotokov1; } set { kolvopotokov1 = value; } }//доп логика
             public override void Display(ListBox listBox1)
                 {
                 listBox1.Items.Add($"Цена {cena},Год выпуска {godvipuska},Частота {chastota},Количество ядер {kolvoiader}, Количество потоков {kolvopotokov},Артикул{articul}");
