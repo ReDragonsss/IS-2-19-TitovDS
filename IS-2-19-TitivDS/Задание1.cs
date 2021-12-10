@@ -52,7 +52,14 @@ namespace IS_2_19_TitivDS
             public string kolvopotokov { get { return kolvopotokov1; } set { kolvopotokov1 = value; } }//доп логика
             public override void Display(ListBox listBox1)
                 {
-                listBox1.Items.Add($"Цена {cena},Год выпуска {godvipuska},Частота {chastota},Количество ядер {kolvoiader}, Количество потоков {kolvopotokov},Артикул{articul}");
+                listBox1.Items.Add($"-------------------------------------");
+                listBox1.Items.Add($"Цена {cena}");
+                listBox1.Items.Add($"Год выпуска {godvipuska}");
+                listBox1.Items.Add($"Частота {chastota}");
+                listBox1.Items.Add($"Количество ядер {kolvoiader}");
+                listBox1.Items.Add($"Количество потоков {kolvopotokov}");
+                listBox1.Items.Add($"Артикул{articul}");");
+                listBox1.Items.Add("--------------------------------------");
                 } 
         }
              class videocart : Accessories<string>//2 наследник
@@ -74,7 +81,14 @@ namespace IS_2_19_TitivDS
                   public string obiempameti { get { return obiempameti1; } set { obiempameti1 = value; } }//переменная для получения текста и возращенее его
             public override void Display(ListBox listBox1)
                  {
-                    listBox1.Items.Add($"Цена{cena},Год выпуска{godvipuska},Частота {chastota},Производитель {proizvod},Обьем памяти {obiempameti},Артикул {articul}");
+                    listBox1.Items.Add($"--------------------------------------");
+                    listBox1.Items.Add($"Цена{cena}");
+                    listBox1.Items.Add($"Год выпуска{godvipuska}");
+                    listBox1.Items.Add($"Частота {chastota}");
+                    listBox1.Items.Add($"Производитель {proizvod}");
+                    listBox1.Items.Add($"Обьем памяти {obiempameti}");
+                    listBox1.Items.Add($"Артикул {articul}");
+                    listBox1.Items.Add($"--------------------------------------");
                  }
              }
         private void button1_Click(object sender, EventArgs e)
