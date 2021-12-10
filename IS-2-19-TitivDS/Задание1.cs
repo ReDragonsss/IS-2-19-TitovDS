@@ -79,8 +79,8 @@ namespace IS_2_19_TitivDS
                   public string chastota { get { return chastota1; } set { chastota1 = value; } }//переменная для получения текста и возращенее его
                   public string proizvod { get { return proizvod1; } set { proizvod1 = value; } }//переменная для получения текста и возращенее его
                   public string obiempameti { get { return obiempameti1; } set { obiempameti1 = value; } }//переменная для получения текста и возращенее его
-            public override void Display(ListBox listBox1)
-                 {
+                  public override void Display(ListBox listBox1)
+                  {
                     listBox1.Items.Add($"--------------------------------------");
                     listBox1.Items.Add($"Цена{cena}");
                     listBox1.Items.Add($"Год выпуска{godvipuska}");
@@ -89,7 +89,7 @@ namespace IS_2_19_TitivDS
                     listBox1.Items.Add($"Обьем памяти {obiempameti}");
                     listBox1.Items.Add($"Артикул {articul}");
                     listBox1.Items.Add($"--------------------------------------");
-                 }
+                  }
              }
         private void button1_Click(object sender, EventArgs e)
         {
