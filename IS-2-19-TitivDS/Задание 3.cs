@@ -38,7 +38,7 @@ namespace IS_2_19_TitivDS
                 connn.Close();
             }
 
-        }
+        }1
         string id_rows = "0";
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {

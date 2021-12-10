@@ -25,25 +25,21 @@ namespace IS_2_19_TitivDS
             string fio = textBox1.Text;
             string vremia = textBox2.Text;
             string sql = $"INSERT INTO t_PraktStud (fioStud, datetimeStud)  VALUES ('{fio}','{vremia}');";// запрос на дбавление фио  и времени 
-            int perem = 0;
-            try// проверка на нормальное подключ
+            try
             {
                 connn.Open();
-                MySqlCommand command1 = new MySqlCommand(sql, connn);
-                perem = command1.ExecuteNonQuery();
-            }
-            catch
-            {
-                MessageBox.Show("непофиксил");
-            }
-            finally
-            {
+                MessageBox.Show("Подключение");
+                MySqlDataAdapter IDataAdapter = new MySqlDataAdapter(sql, connn);
+                DataSet dataset = new DataSet();
+                IDataAdapter.Fill(dataset);
+                dataGridView1.DataSource = dataset.Tables[0];
                 connn.Close();
-                if (perem != 0)
-                {
-                    MessageBox.Show("пофиксил");
-                }
             }
+            catch (Exception osh)
+            {
+                MessageBox.Show("Произошла ошибка" + osh);
+                connn.Close();
+            }  
         }
     }
 }
