@@ -58,7 +58,7 @@ namespace IS_2_19_TitivDS
                 listBox1.Items.Add($"Частота {chastota}");
                 listBox1.Items.Add($"Количество ядер {kolvoiader}");
                 listBox1.Items.Add($"Количество потоков {kolvopotokov}");
-                listBox1.Items.Add($"Артикул{articul}");");
+                listBox1.Items.Add($"Артикул{articul}");
                 listBox1.Items.Add("--------------------------------------");
                 } 
         }
