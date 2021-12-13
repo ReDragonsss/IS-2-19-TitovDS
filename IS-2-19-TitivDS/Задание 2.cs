@@ -24,6 +24,10 @@ namespace IS_2_19_TitivDS
                 string password = "test_pass";
                 string connString = $"server={host};port={port};user={username};database={database};password={password};";
                 return connString;
+                // public void Display
+                //{
+                //MessageBox.Show($"{host},{port},{username},{database},{password}");
+                //}
             }
         }
         MySqlConnection conn = new MySqlConnection(Vozrah.GetDVozrah());//обьевление переменной для конекта в бд

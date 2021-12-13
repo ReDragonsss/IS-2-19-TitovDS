@@ -37,8 +37,8 @@ namespace IS_2_19_TitivDS
         class Cp : Accessories<string>//1 наследник
         {
             public string chastota1;
-            public string kolvoiader1;
-            public string kolvopotokov1;
+            public int kolvoiader1;
+            public int kolvopotokov1;
             public Cp(string Cena, string Godvipuska,string Articul, string Chastota, string Kolvoiader, string Kolvopotokov)//конструктор для инициализации переменные
                : base(Cena, Godvipuska,Articul)
             {
@@ -113,6 +113,11 @@ namespace IS_2_19_TitivDS
             string articul = Convert.ToString(textBox6.Text);// заполнение переменных
             Cp cp1 = new Cp(cena, godvipuska, articul, chastota, kolvoiader, kolvopotokov);
             cp1.Display(listBox1);//вызов метода
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

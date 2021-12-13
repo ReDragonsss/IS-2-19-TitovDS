@@ -30,9 +30,6 @@ namespace IS_2_19_TitivDS
                 connn.Open();
                 MessageBox.Show("Подключение");
                 MySqlDataAdapter IDataAdapter = new MySqlDataAdapter(sql, connn);
-                DataSet dataset = new DataSet();
-                IDataAdapter.Fill(dataset);
-                dataGridView1.DataSource = dataset.Tables[0];
                 connn.Close();
             }
             catch (Exception osh)
